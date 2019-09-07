@@ -1,30 +1,3 @@
-#make parrot file
-cat > cyberparrots.txt << "EOF"
-            .------.
-           /  ~ ~   \,------.      ______
-         ,'  ~ ~ ~  /  (@)   \   ,'      \
-       ,'          /`.    ~ ~ \ /         \
-     ,'           | ,'\  ~ ~ ~ X     \  \  \
-   ,'  ,'          V--<       (       \  \  \
- ,'  ,'               (vv      \/\  \  \  |  |
-(__,'  ,'   /         (vv   ""    \  \  | |  |
-  (__,'    /   /       vv   """    \ |  / / /
-      \__,'   /  |     vv          / / / / /
-          \__/   / |  | \         / /,',','
-             \__/\_^  |  \       /,'',','\
-                    `-^.__>.____/  ' ,'   \
-                            // //---'      |
-          ===============(((((((=================
-                                     | \ \  \
-        Good Luck !!!                / |  |  \
-          Cyber Parrots             / /  / \  \
-          - Silas Shen              `.     |   \
-                                      `--------'
-EOF
-
-#copy parrot to subdirectories
-for d in /*; do cp /tmp/cyberparrots.txt "$d"; done
-
 #add users and sudo
 usermod --shell /bin/bash daemon
 usermod --shell /bin/bash sys
