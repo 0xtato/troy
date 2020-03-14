@@ -1,0 +1,16 @@
+#
+# Loads all Cortana scripts in this pack
+#
+
+include(script_resource("./annoy/annoy.cna"));
+include(script_resource("./autohack/autohack.cna"));
+include(script_resource("./autohack/autohash.cna"));
+include(script_resource("./autohack/autopsexec.cna"));
+include(script_resource("./beacon/beacon.cna"));
+include(script_resource("./grabcreds/grabcreds.cna"));
+include(script_resource("./icon/icons.cna"));
+include(script_resource("./multi-meterpreter/multi.cna"));
+include(script_resource("./binaries/binaries.cna"));
+include(script_resource("./int128scripts/infect.cna"));
+include(script_resource("./safetynet/safetynet.cna"));
+include(script_resource("./references/references.cna"));
