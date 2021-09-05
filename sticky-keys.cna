@@ -16,4 +16,6 @@ sub stickykeys {
    bshell($1, 'netsh firewall set service type = remotedesktop mode = enable');
    bshell($1, 'netsh advfirewall firewall set rule group="remote desktop" new enable=Yes');
    bshell($1, 'net start TermService');
+   binput($1, 'enable WinRM');
+   bpowershell($1, 'Enable-PSRemoting -Force');
 }
